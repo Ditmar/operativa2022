@@ -1,16 +1,16 @@
 class Floyd {
     constructor(matrix) {
-        this.matrix = matrix;
-        //this.copyMatrix(matrix);
+        this.matrix = [];
+        this.copyMatrix(matrix);
         this.path = [];
     }
-    // copyMatrix = (matrix) => {
-    //     for(let i = 0; i < matrix.length; i++) {
-    //         let vector = matrix[i];
-    //         this.matrix.push([...vector]);
-    //     }
-    //     console.log(this.matrix);
-    // }
+    copyMatrix = (matrix) => {
+        for(let i = 0; i < matrix.length; i++) {
+            let vector = matrix[i];
+            this.matrix.push([...vector]);
+        }
+        console.log(this.matrix);
+    }
     solve = () => {
         for(let i = 0; i < this.matrix.length; i++) {
             let pathData = [];
